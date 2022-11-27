@@ -1,0 +1,33 @@
+.section__head {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 00.03em;
+    margin-bottom: 50px;
+  }
+  .image-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+  }
+  .container--flex-center {
+    display: flex;
+    align-items: center;
+  }
+  .block {
+    display: block;
+  }
+  .footer__flex {
+    display: flex;
+    align-items: baseline;
+  }
+  .container {
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
