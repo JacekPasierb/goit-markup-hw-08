@@ -1,13 +1,13 @@
 .advantages {
   &__flex {
     display: flex;
-    padding-top: 109px;
+    flex-direction: column;
+    padding-top: 94px;
   }
   & .advantage:not(:last-child) {
-    margin-right: 30px;
+    margin-bottom: 30px;
   }
 }
-
 .advantage {
   &__tittle {
     font-weight: 700;
@@ -17,6 +17,8 @@
     text-transform: uppercase;
     padding-top: 30px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
   }
   &__description {
     font-size: 14px;
@@ -25,7 +27,7 @@
     color: var(--background-color-three);
   }
   &__item {
-    width: 270px;
+    width: 450px;
     height: 120px;
     background-color: #f5f4fa;
     display: flex;
@@ -35,5 +37,47 @@
   &__icon {
     width: 70px;
     height: 70px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .advantages {
+    &__flex {
+      flex-direction: row;
+    }
+    & .advantage:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+  }
+  .advantage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__item {
+      width: 270px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+@media screen and (min-width: $laptop) {
+  .advantages {
+    &__flex {
+      flex-direction: row;
+    }
+    & .advantage:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  .advantage {
+    &__item {
+      width: 270px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
