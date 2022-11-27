@@ -2,7 +2,8 @@
   &__flex {
     display: flex;
     flex-direction: column;
-    padding-top: 60px;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
   & .advantage:not(:last-child) {
     margin-bottom: 30px;
@@ -47,6 +48,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       gap:30px;
+      margin-bottom: 45px;
      
     }
     & .advantage:not(:nth-child(3)) {
@@ -75,7 +77,8 @@
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      padding-top: 94px;
+      margin-top: 94px;
+      margin-bottom: 0;
     }
     & .advantage:not(:last-child) {
       margin-right: 30px;
