@@ -4,7 +4,7 @@
   line-height: 1.2;
   text-align: center;
   letter-spacing: 00.03em;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .image-layout {
   display: flex;
@@ -32,16 +32,17 @@
   padding-bottom: 60px;
 }
 @media screen and (min-width: $tablet) {
+  
   .container {
     max-width: 768px;
   }
-  .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
+
 }
 
 @media screen and (min-width: $laptop) {
+  .section__head {
+    margin-bottom: 50px;
+  }
   .container {
     max-width: 1200px;
   }
