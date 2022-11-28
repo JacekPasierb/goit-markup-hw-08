@@ -2,13 +2,44 @@
   display: flex;
   padding-block: 118px;
   background-color: var(--background-color);
+  @media screen and (min-width: $laptop) {
+    padding-block: 200px;
+  }
   &__overlays {
+    width: 100vw;
     margin: 0 auto;
     background-image: linear-gradient(#2f303a66, #2f303a66),
-      url(../images/Img.jpg);
+      url(../images/header-s@1x.jpg);
     background-size: cover;
     background-position: center center;
     max-width: 1600px;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(#2f303a66, #2f303a66),
+        url(../images/header-s@2x.jpg);
+    }
+    @media screen and (min-width: $tablet) {
+      background-image: linear-gradient(#2f303a66, #2f303a66),
+        url(../images/header-md@1x.jpg);
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(#2f303a66, #2f303a66),
+          url(../images/header-md@2x.jpg);
+      }
+    }
+    @media screen and (min-width: $laptop) {
+      background-image: linear-gradient(#2f303a66, #2f303a66),
+        url(../images/header-lg@1x.jpg);
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(#2f303a66, #2f303a66),
+          url(../images/header-lg@2x.jpg);
+      }
+    }
   }
   &__flex {
     display: flex;
@@ -26,24 +57,15 @@
     text-transform: uppercase;
     display: flex;
     margin-bottom: 30px;
-  }
-  &__button {
-    padding: 10px 41px 10px 42px;
-  }
-}
-@media screen and (min-width: $tablet) {
-  .head {
-    padding-block: 200px;
-    &__overlays {
-      background-image: linear-gradient(#2f303a66, #2f303a66),
-        url(.../images);
-    
-    }
-    &__tittle {
-      width: 696px;
+    @media screen and (min-width: $laptop){
+      width:696px;
       height: 120px;
       font-size: 44px;
       line-height: 1.4;
     }
   }
+  &__button {
+    padding: 10px 41px 10px 42px;
+  }
 }
+
