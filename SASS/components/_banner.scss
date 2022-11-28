@@ -34,6 +34,11 @@
 @media screen and (min-width: $tablet) {
   .head {
     padding-block: 200px;
+    &__overlays {
+      background-image: linear-gradient(#2f303a66, #2f303a66),
+        url(.../images);
+    
+    }
     &__tittle {
       width: 696px;
       height: 120px;
