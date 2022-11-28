@@ -5,6 +5,9 @@
   line-height: 1.2;
   letter-spacing: 00.03em;
   color: var(--two-color-logo);
+  @media screen and (min-width: $laptop) {
+    font-size: 26px;
+  }
   &-overlay {
     color: var(--one-color-logo);
   }
@@ -16,48 +19,60 @@
 .nav {
   flex-grow: 1;
   display: none;
+  @media screen and (min-width: $tablet) {
+    display: block;
+    margin-right: 101px;
+  }
 }
 .contact__item {
   display: none;
 }
-@media screen and (min-width: $tablet) {
-  
-  .header_logo {
+.header_logo {
+  @media screen and (min-width: $tablet) {
     margin: 26px 83px 26px 0px;
   }
-  .nav {
+  @media screen and (min-width: $laptop) {
+    margin: 24px 93px 25px 0px;
+  }
+}
+
+.navigation {
+  display: flex;
+  gap: 60px;
+  @media screen and (min-width: $laptop) {
+    gap: 46px;
+  }
+  &__link {
+    font-size: 14px;
+    line-height: 1.1;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  &__link--active {
+    position: relative;
     display: block;
-    margin-right: 101px;
-  }
-  .navigation {
-    display: flex;
-    gap: 60px;
-    &__link {
-      font-size: 14px;
-      line-height: 1.1;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-    }
-    &__link--active {
-      position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -33px;
+      left: 0;
       display: block;
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: -33px;
-        left: 0;
-        display: block;
-        width: 100%;
-        height: 4px;
-        background-color: rgba(33, 150, 243, 1);
-        border: 1px solid rgba(33, 150, 243, 1);
-        border-radius: 2px;
-      }
+      width: 100%;
+      height: 4px;
+      background-color: rgba(33, 150, 243, 1);
+      border: 1px solid rgba(33, 150, 243, 1);
+      border-radius: 2px;
     }
   }
-  .contact {
-    display:flex;
+}
+.contact {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: flex;
     flex-direction: column;
+    @media screen and (min-width: $laptop) {
+      flex-direction: row;
+    }
     &__item {
       display: block;
     }
@@ -76,6 +91,10 @@
       align-items: center;
       /* will-change: fill; */
       transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      @media screen and (min-width: $laptop) {
+        font-size: 14px;
+        line-height: 1.1;
+      }
       &:hover {
         fill: #2196f3;
       }
@@ -84,41 +103,21 @@
       margin-right: 8px;
       width: 14px;
       height: 10px;
+      @media screen and (min-width: $laptop) {
+        margin-right: 10px;
+        width: 16px;
+        height: 12px;
+      }
     }
     &__icon--smartphone {
       width: 10px;
       height: 14px;
+      @media screen and (min-width: $laptop) {
+        height: 16px;
+      }
     }
-   
   }
-}
-
-@media screen and (min-width: $laptop) {
-  .logo {
-    font-size: 26px;
-  }
-  .header_logo {
-    margin: 24px 93px 25px 0px;
-  }
-  .navigation {
-    display: flex;
-    gap: 46px;
-  }
-  .contact {
-   flex-direction: row;
-    
-    &__link {
-      font-size: 14px;
-      line-height: 1.1;
-    }
-    &__icon {
-      margin-right: 10px;
-      width: 16px;
-      height: 12px;
-    }
-    &__icon--smartphone {
-      height: 16px;
-    }
+  @media screen and (min-width: $laptop) {
     &__item:not(:last-child) {
       margin-right: 30px;
     }
