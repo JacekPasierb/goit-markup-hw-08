@@ -23,8 +23,23 @@
 }
 .footer__flex {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+   justify-content: center;
+   align-items: flex-start;
+  }
+  @media screen and (min-width: $laptop) {
+
+    align-items: baseline;
+    flex-wrap: nowrap;
+  }
 }
+
 .container {
   padding: 0 15px;
   margin: 0 auto;
@@ -45,4 +60,16 @@
     padding-top: 94px;
     padding-bottom: 94px;
   }
+}
+.footer--logo {
+  display: flex;
+  justify-content: center;
+  @media screen and (min-width: $tablet) {
+ justify-content: center;
+ margin-right: 204px;
+  }
+  @media screen and (min-width: $laptop) {
+    justify-content: center;
+    margin-right: 0;
+     }
 }
