@@ -286,12 +286,30 @@
           <ul class="team__image-layout">
             <li>
               <figure class="team__card">
-                <img
-                  src="images/worker.jpg"
-                  alt="zdjęcie Johna"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/worker1-lg@1x.jpg 1x,
+                      ./images/worker1-lg@2x.jpg 2x
+                    "
+                    type="image/jpg" />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/worker1-md@1x.jpg 1x,
+                      ./images/worker1-md@2x.jpg 2x
+                    "
+                    type="image/jpg" />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/worker1-s@1x.jpg 1x,
+                      ./images/worker1-s@2x.jpg 2x
+                    "
+                    type="image/jpg" />
+                  <img class="team__img" src="./images/worker.jpg" alt="zdjęcie Johna"
+                /></picture>
                 <figcaption class="team__details">
                   <p class="team__name">John Doe</p>
                   <p class="team__profession">Product Designer</p>
@@ -334,12 +352,30 @@
             </li>
             <li>
               <figure class="team__card">
-                <img
-                  src="images/workerfirst.jpg"
-                  alt="zdjęcie Johna"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/worker2-lg@1x.jpg 1x,
+                      ./images/worker2-lg@2x.jpg 2x
+                    "
+                    type="image/jpg" />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/worker2-md@1x.jpg 1x,
+                      ./images/worker2-md@2x.jpg 2x
+                    "
+                    type="image/jpg" />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/worker2-s@1x.jpg 1x,
+                      ./images/worker2-s@2x.jpg 2x
+                    "
+                    type="image/jpg" />
+                  <img src="./images/workerfirst.jpg" alt="zdjęcie Johna"
+                /></picture>
                 <figcaption class="team__details">
                   <p class="team__name">John Doe</p>
                   <p class="team__profession">Frontend Developer</p>
@@ -382,12 +418,30 @@
             </li>
             <li>
               <figure class="team__card">
-                <img
-                  src="images/workersecond.jpg"
-                  alt="zdjęcie Johna"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/worker3-lg@1x.jpg 1x,
+                      ./images/worker3-lg@2x.jpg 2x
+                    "
+                    type="image/jpg" />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/worker3-md@1x.jpg 1x,
+                      ./images/worker3-md@2x.jpg 2x
+                    "
+                    type="image/jpg" />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/worker3-s@1x.jpg 1x,
+                      ./images/worker3-s@2x.jpg 2x
+                    "
+                    type="image/jpg" />
+                  <img src="./images/workersecond.jpg" alt="zdjęcie Johna"
+                /></picture>
                 <figcaption class="team__details">
                   <p class="team__name">John Doe</p>
                   <p class="team__profession">Marketing</p>
@@ -430,12 +484,30 @@
             </li>
             <li>
               <figure class="team__card">
-                <img
-                  src="images/workerthird.jpg"
-                  alt="zdjęcie Johna"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/worker4-lg@1x.jpg 1x,
+                      ./images/worker4-lg@2x.jpg 2x
+                    "
+                    type="image/jpg" />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/worker4-md@1x.jpg 1x,
+                      ./images/worker4-md@2x.jpg 2x
+                    "
+                    type="image/jpg" />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/worker4-s@1x.jpg 1x,
+                      ./images/worker4-s@2x.jpg 2x
+                    "
+                    type="image/jpg" />
+                  <img src="./images/workerthird.jpg" alt="zdjęcie Johna"
+                /></picture>
                 <figcaption class="team__details">
                   <p class="team__name">John Doe</p>
                   <p class="team__profession">UI Designer</p>
