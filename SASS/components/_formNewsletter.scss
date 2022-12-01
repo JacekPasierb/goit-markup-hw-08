@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   @media screen and (min-width: $laptop) {
+   align-items: flex-start;
     margin-left: 77px;
   }
     
@@ -11,6 +12,11 @@
       flex-direction: column;
       gap: 20px;
       align-items: center;
+      @media screen and (min-width: $laptop) {
+        display: flex;
+   flex-direction: row;
+ 
+      }
     }
     
     &__input {
@@ -59,6 +65,7 @@
     }
     
     @media screen and (min-width: $laptop) {
+      align-items: flex-start;
       margin-left: 70px;
       
     }
