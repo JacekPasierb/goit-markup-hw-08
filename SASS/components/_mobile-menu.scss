@@ -2,14 +2,20 @@
   display: none;
 }
 .mobile-menu {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: var(--color-text);
   z-index: 3;
-  padding: 48px 40px;
+
+  &__wrapper {
+    min-width: 320px;
+    position: relative;
+    margin: 48px 40px;
+    height: 100vh;
+  }
   &__button {
     position: absolute;
     top: 10px;
@@ -36,8 +42,13 @@
   }
   &__button--x {
     position: absolute;
-    right: 10px;
+    left: 425px;
     top: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--color-text);
     border: none;
 
@@ -46,7 +57,15 @@
 
     &__btn:hover,
     &__btn:focus {
-      fill: var(--one-color-logo);
+      background-color: var(--one-color-logo);
+    }
+  }
+  &--icon {
+    &:hover,
+    &:focus {
+      fill: var(--brand-color);
+      background-color: #fff;
+      box-shadow: none;
     }
   }
 
@@ -66,8 +85,10 @@
   }
   &__list-contact {
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 32px;
-    margin-top: 302px;
+    position: absolute;
+    bottom: 176px;
   }
   &__list-contact--tel {
     font-weight: 500;
@@ -87,10 +108,14 @@
     color: var(--background-color-three);
   }
   &__list-social {
-    margin-top: 64px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 90px;
 
     gap: 20px;
   }
+
   &__link-social {
     font-weight: 500;
     font-size: 18px;
@@ -98,10 +123,13 @@
     letter-spacing: 0.02em;
 
     color: var(--one-color-logo);
-  }
-  &__item-social:not(:last-child) &__link-social {
-    display: flex;
-    padding-right: 10px;
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    @media screen and (max-width: 320px) {
+      font-size: 15px;
+    }
+    &__item-social:not(:last-child) &__link-social {
+      display: flex;
+      padding-right: 10px;
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
   }
 }
