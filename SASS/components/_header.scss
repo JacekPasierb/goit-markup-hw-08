@@ -7,6 +7,7 @@
   color: var(--two-color-logo);
   @media screen and (min-width: $laptop) {
     font-size: 26px;
+    line-height: 1.4;
   }
   &-overlay {
     color: var(--one-color-logo);
