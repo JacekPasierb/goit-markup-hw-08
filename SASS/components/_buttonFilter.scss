@@ -1,8 +1,17 @@
 .filter {
   display: flex;
-  justify-content: center;
-  gap: 9px;
-  margin-bottom: 50px;
+
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  @media screen and (min-width: $laptop) {
+    gap: 9px;
+    margin-bottom: 50px;
+  }
   &__button {
     font-weight: 500;
     font-size: 16px;

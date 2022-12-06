@@ -1,7 +1,12 @@
 .cards {
   display: flex;
+
   flex-wrap: wrap;
   gap: 30px;
+  @media screen and (min-width: $tablet) {
+    
+  
+  }
 }
 .card {
   background: var(--color-text);
@@ -43,7 +48,13 @@
     line-height: 1.5;
     letter-spacing: 0.03em;
     color: #ffffff;
-    padding: 49px 45px 49px 24px;
+    padding: 77px 24px;
+    @media screen and (min-width: $tablet) {
+      padding: 49px 24px 49px 24px;
+    }
+    @media screen and (min-width: $laptop) {
+      padding: 49px 45px 49px 45px;
+    }
   }
   &__project {
     display: flex;
