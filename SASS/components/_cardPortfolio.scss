@@ -4,6 +4,7 @@
 
   gap: 30px;
   &__item {
+    max-width: 354px;
     @media screen and (min-width: 768px) {
       flex-basis: calc((100% - 30px) / 2);
     }
