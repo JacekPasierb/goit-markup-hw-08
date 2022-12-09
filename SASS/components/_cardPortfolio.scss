@@ -3,6 +3,7 @@
   flex-wrap: wrap;
 
   gap: 30px;
+
   &__item {
     max-width: 354px;
     @media screen and (min-width: 768px) {
@@ -11,6 +12,9 @@
 
     @media screen and (min-width: 1200px) {
       flex-basis: calc((100% - 30px) / 3);
+    }
+    &:nth-child(2){
+      max-width: 354px;
     }
   }
 }
